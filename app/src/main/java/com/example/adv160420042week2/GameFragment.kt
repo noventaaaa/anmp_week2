@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.Navigation
 import com.example.adv160420042week2.databinding.FragmentGameBinding
 
@@ -20,16 +22,22 @@ class GameFragment : Fragment() {
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val btnBack = view.findViewById<Button>(R.id.btnBack)
+        val txtScore = view.findViewById<TextView>(R.id.txtScore)
         if(arguments != null) {
-            val playerName =
-                GameFragmentArgs.fromBundle(requireArguments()).playerName
-            binding.txtTurn.text = "$playerName's Turn"
+//            val playerScore = view.findViewById<TextView>(R.id.txtAnswer)
+//            playerScore = GameFragmentArgs.fromBundle(requireArguments())
+//            val score =
+//                GameFragmentArgs.fromBundle(requireArguments()).playerScore
+//            txtScore.text = "Your Score is $score"
         }
-        binding.btnBack.setOnClickListener {
+        btnBack.setOnClickListener {
             val action = GameFragmentDirections.actionMainFragment()
             Navigation.findNavController(it).navigate(action)
         }
     }
+
 }
