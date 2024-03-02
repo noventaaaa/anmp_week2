@@ -11,11 +11,11 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/txtTurn"
+            android:id="@+id/txtScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="240dp"
-            android:text="Player's Turn"
+            android:layout_marginTop="248dp"
+            android:text="Your Score is X"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -24,14 +24,27 @@
 
         <Button
             android:id="@+id/btnBack"
-            android:layout_width="134dp"
-            android:layout_height="53dp"
-            android:layout_marginTop="12dp"
-            android:text="BACK"
+            android:layout_width="275dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="24dp"
+            android:text="BACK TO MAIN SCREEN"
             app:icon="@drawable/baseline_keyboard_backspace_24"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtTurn" />
+            app:layout_constraintTop_toBottomOf="@+id/txtScore" />
+
+        <TextView
+            android:id="@+id/txtOver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="136dp"
+            android:layout_marginBottom="32dp"
+            android:text="GAME OVER"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtScore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
