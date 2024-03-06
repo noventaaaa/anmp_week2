@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.Navigation
 import com.example.adv160420042week2.databinding.FragmentGameBinding
+import org.w3c.dom.Text
 
 class GameFragment : Fragment() {
 
@@ -28,11 +29,11 @@ class GameFragment : Fragment() {
         val btnBack = view.findViewById<Button>(R.id.btnBack)
         val txtScore = view.findViewById<TextView>(R.id.txtScore)
         if(arguments != null) {
-//            val playerScore = view.findViewById<TextView>(R.id.txtAnswer)
-//            playerScore = GameFragmentArgs.fromBundle(requireArguments())
-//            val score =
-//                GameFragmentArgs.fromBundle(requireArguments()).playerScore
-//            txtScore.text = "Your Score is $score"
+            var playerScore = view.findViewById<TextView>(R.id.txtAnswer)
+            playerScore = GameFragmentArgs.fromBundle(requireArguments())
+            val score =
+                GameFragmentArgs.fromBundle(requireArguments()).playerScore
+            txtScore.text = "Your Score is $score"
         }
         btnBack.setOnClickListener {
             val action = GameFragmentDirections.actionMainFragment()

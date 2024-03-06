@@ -44,11 +44,11 @@ class MainFragment : Fragment() {
         num1.text = txtNum1.toString()
         num2.text = txtNum2.toString()
 
-//        if(arguments != null) {
-//            val playerScore = binding.txtAnswer.text.toString()
-//            playerScore = GameFragmentArgs.fromBundle(requireArguments()).playerScore
-//            playerScore = GameFragmentArgs.fromBundle(requireArguments()).playerScore
-//        }
+        if(arguments != null) {
+            var playerScore = binding.txtAnswer.text.toString()
+            playerScore = GameFragmentArgs.fromBundle(requireArguments()).playerScore
+            playerScore = GameFragmentArgs.fromBundle(requireArguments()).playerScore
+        }
 
         binding.btnSubmit.setOnClickListener {
             var playerScore = binding.txtAnswer.text.toString()
